@@ -12,13 +12,13 @@ public class AnyMatcherTest {
 
     @Test
     void anyMatchTest() {
-        GameNumGen genMock = mock(GameNumGen.class);
-        given(genMock.generate(any())).willReturn("456");
+        GameNumGen genMock = Mockito.mock(GameNumGen.class);
+        BDDMockito.given(genMock.generate(ArgumentMatchers.any())).willReturn("456");
 
         String num = genMock.generate(GameLevel.EASY);
-        assertEquals("456", num);
+        Assertions.assertEquals("456", num);
 
         String num2 = genMock.generate(GameLevel.NORMAL);
-        assertEquals("456", num2);
+        Assertions.assertEquals("456", num2);
     }
 }

@@ -9,10 +9,10 @@ public class GameTest {
 
     @Test
     void init() {
-        GameNumGen genMock = mock(GameNumGen.class);
+        GameNumGen genMock = Mockito.mock(GameNumGen.class);
         Game game = new Game(genMock);
         game.init(GameLevel.EASY);
 
-        then(genMock).should().generate(GameLevel.EASY);
+        BDDMockito.then(genMock).should().generate(GameLevel.EASY);
     }
 }

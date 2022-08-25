@@ -12,9 +12,9 @@ public class VoidMethodStubTest {
 
     @Test
     void voidMethodWillThrowTest() {
-        List<String> mockList = mock(List.class);
+        List<String> mockList = Mockito.mock(List.class);
 
-        willThrow(UnsupportedOperationException.class)
+        BDDMockito.willThrow(UnsupportedOperationException.class)
                 .given(mockList)
                 .clear();
 
