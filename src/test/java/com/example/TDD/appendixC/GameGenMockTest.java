@@ -2,6 +2,8 @@ package com.example.TDD.appendixC;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.BDDMockito;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
@@ -22,8 +24,8 @@ public class GameGenMockTest {
         String num = genMock.generate(GameLevel.EASY);
 
         //검증
-        Assertions.assertEquals("123", num);
-        Assertions.assertThrows(
+        assertEquals("123", num);
+        assertThrows(
                 IllegalArgumentException.class,
                 () -> genMock.generate(null));
     }

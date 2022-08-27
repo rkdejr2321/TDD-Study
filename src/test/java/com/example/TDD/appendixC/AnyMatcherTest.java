@@ -2,6 +2,9 @@ package com.example.TDD.appendixC;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentMatchers;
+import org.mockito.BDDMockito;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -16,9 +19,9 @@ public class AnyMatcherTest {
         BDDMockito.given(genMock.generate(ArgumentMatchers.any())).willReturn("456");
 
         String num = genMock.generate(GameLevel.EASY);
-        Assertions.assertEquals("456", num);
+        assertEquals("456", num);
 
         String num2 = genMock.generate(GameLevel.NORMAL);
-        Assertions.assertEquals("456", num2);
+        assertEquals("456", num2);
     }
 }

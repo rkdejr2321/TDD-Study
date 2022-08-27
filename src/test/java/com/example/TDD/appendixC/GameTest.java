@@ -1,9 +1,8 @@
 package com.example.TDD.appendixC;
 
 import org.junit.jupiter.api.Test;
-
-import static org.mockito.BDDMockito.then;
-import static org.mockito.Mockito.mock;
+import org.mockito.BDDMockito;
+import org.mockito.Mockito;
 
 public class GameTest {
 
