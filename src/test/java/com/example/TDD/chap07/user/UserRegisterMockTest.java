@@ -33,7 +33,7 @@ public class UserRegisterMockTest {
 
     }
 
-    @DisplayName("회우너 가입시 암호 검사 수행함")
+    @DisplayName("회원 가입시 암호 검사 수행함")
     @Test
     void checkPassword() {
         userRegister.register("id", "pw", "email");
